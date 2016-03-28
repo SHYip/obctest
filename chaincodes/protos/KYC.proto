@@ -1,0 +1,23 @@
+syntax = "proto3";
+package proto;
+
+message Record {   
+  string Nric = 1;
+  string Name = 2;
+  string Address = 3;  // Unique ID number for this person.
+  string Mobile = 4;
+  }
+  
+message Response {
+  enum Match {
+    NOENTRY = 0;
+    MATCH = 1;
+    NOMATCH = 2;
+    
+  }
+  Match Nric = 1;
+  Match Name = 2;
+  Match Address = 3;
+  Match Mobile = 4;
+  
+}
